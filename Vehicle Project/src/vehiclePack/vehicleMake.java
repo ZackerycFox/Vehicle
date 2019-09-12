@@ -7,7 +7,7 @@ public class vehicleMake {
 
 	String company; 
 	String plantLocation;
-	String mintDate;
+	Date mintDate;
 	Image logo; 
 	int contactInfo; 
 	String webSite; 

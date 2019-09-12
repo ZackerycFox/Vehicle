@@ -2,9 +2,22 @@ package vehiclePack;
 
 public class vehicleModel {
 	
-	String bodyType;
-	String modelName;
-	String[] trimPackage;
+	private String bodyType;
+	private String modelName;
+	private String[] trimPackage;
+	
+	vehicleModel() { 
+		bodyType = "Crossover"; 
+		modelName = "CrossTrek";
+		trimPackage = new String[] {"Wheels", "4", "MPG", "28", "Color", "Burnt Orange", "Seats", "5", "Fuel Capacity", "18.5", "tonage", "1600lb"}; 
+	}
+	
+	vehicleModel(String Bt, String Mn, String[] trimPac) {
+		bodyType = Bt;
+		modelName = Mn;
+		trimPackage = trimPac; 
+		
+	}
 	
 	public String getModelName() {
 		return modelName;

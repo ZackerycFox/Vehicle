@@ -1,10 +1,10 @@
 package vehiclePack;
 public class testdriver {
 	public static void main (String args[]) {
-		Vehicle minivan = new Vehicle(7,16,21);
-		Vehicle sportscar = new Vehicle(2,14,12);
-		Vehicle Truck = new Vehicle();
-		Vehicle VWthing = new Vehicle(8,10,10,4,26,1952,226758,1850,"Olive Green");
+		vehicle minivan = new vehicle(7,16,21);
+		vehicle sportscar = new vehicle(2,14,12);
+		vehicle Truck = new vehicle();
+		vehicle VWthing = new vehicle(8,10,10,4,26,1952,226758,1850,"Olive Green");
 			
 		double gallons;
 		double refuels;
