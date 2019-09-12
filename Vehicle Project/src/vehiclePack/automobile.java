@@ -20,6 +20,7 @@ public class automobile extends vehicle {
 			title = "Zackery Fox";
 			automake = new vehicleMake();
 			automodel = new vehicleModel();
+			updateVehical();
 		}
 		
 		automobile(int passengers, int fuelcap, int mpg, vehicleMake VW, vehicleModel Golf){
@@ -31,6 +32,7 @@ public class automobile extends vehicle {
 			title = "Zackery Fox";
 			automake = new vehicleMake();
 			automodel = new vehicleModel();
+			updateVehical();
 		}
 		
 		automobile(int passengers, int fuelcap, int mpg, int doors, int tiresize, int year, int totalmiles, int tonage, String color,  vehicleMake Toyota, vehicleModel Tacoma){
@@ -42,6 +44,7 @@ public class automobile extends vehicle {
 			title = "Zackery Fox";
 			automake = new vehicleMake();
 			automodel = new vehicleModel();
+			updateVehical();
 		}
 		
 	public int getnumWheels() {
@@ -54,6 +57,38 @@ public class automobile extends vehicle {
 			System.out.println("Bad Trim Package");
 		}
 		return wheelCount; 
+	}
+	
+	private void updateVehical() { 
+		String[] trimPack = automodel.getTrimPackage();
+		//"Wheels", "4", "MPG", "28", "Color", "Burnt Orange", "Seats", "5", "Fuel Capacity", "18.5", "tonage", "1600lb"
+		int wCount, MPG, pass, fuelCap; 
+		double tonage; 
+		String colour = trimPack[5];
+		
+		try {
+			wCount = Integer.parseInt(trimPack[1]);
+			MPG = Integer.parseInt(trimPack[3]);
+			pass = Integer.parseInt(trimPack[7]);
+			fuelCap = Integer.parseInt(trimPack[9]);
+		}
+		catch(Exception e) {
+			wCount = 4; 
+			MPG = 20; 
+			pass = 4;
+			fuelCap = 20; 
+		
+			System.out.println("Bad Trim Package");
+		}
+		
+		try {
+			tonage = Double.parseDouble(trimPack[11]);
+		}
+		catch (Exception e) {
+			tonage = 75; 
+			System.out.println("Bad Trim Package");
+		}
+		
 	}
 	
 	public int getnumDoors() {

@@ -15,7 +15,7 @@ public class vehicleMake {
 	vehicleMake() { 
 		company = "Toyota"; 
 		plantLocation = "Japan";
-		mintDate = "";  
+		//mintDate = "";  
 		//logo = getlogo(Toyota);
 		contactInfo = 4454451;
 		webSite = "VisitToyotaToday.com";
